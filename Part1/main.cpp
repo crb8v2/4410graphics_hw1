@@ -14,6 +14,17 @@ void myInit(void){
 
 void myDisplay(void){
 
+
+    srand(time(NULL));
+
+    float a = (float)(rand()/(float)RAND_MAX);
+    float b = (float)(rand()/(float)RAND_MAX);
+    float c = (float)(rand()/(float)RAND_MAX);
+
+    float d = (rand()/(float)RAND_MAX);
+    float e = (rand()/(float)RAND_MAX);
+    float f = (rand()/(float)RAND_MAX);
+
     int flag = 0;
 
     glClear(GL_COLOR_BUFFER_BIT);
@@ -21,9 +32,9 @@ void myDisplay(void){
     for(int aa = 0; aa <= 640; aa += 80){
         for(int bb = 0; bb <= 640; bb += 80){
             if (flag % 2 == 0){
-                glColor3f(255,255,255);
+                glColor3f(a,b,c);
             } else {
-                glColor3f(0,0,0);
+                glColor3f(d,e,f);
             }
             glRecti(aa, bb, aa + 80, bb + 80);
             flag++;
@@ -38,7 +49,7 @@ int main(int argc, char ** argv){
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
     glutInitWindowSize(640,640);
     glutInitWindowPosition(100,150);
-    glutCreateWindow("Homework 1");
+    glutCreateWindow("Homework 1 Part 1");
     glutDisplayFunc(myDisplay);
     myInit();
     glutMainLoop();
