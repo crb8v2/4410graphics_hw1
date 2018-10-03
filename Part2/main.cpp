@@ -46,24 +46,6 @@ void myDisplay(void) {
     }
     glFlush();
 }
-//
-//    nn = 4;
-//
-//    xx = (rand()/(GLfloat)RAND_MAX);
-//    yy = (rand()/(GLfloat)RAND_MAX);
-//    numPolys = nn;
-//    numLines = nn;
-//
-//    for(int ii = 0; ii < nn; ii++) {
-//        glBegin(GL_LINE_STRIP);
-//
-//        for (int jj = 0; jj < nn; jj++)
-//            glVertex2f(xx, yy);
-//
-//        glEnd();
-//    }
-//    glFlush();
-//}
 
 int main(int argc, char ** argv){
     glutInit(&argc, argv);
