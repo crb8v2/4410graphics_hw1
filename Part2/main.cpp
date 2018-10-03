@@ -22,10 +22,7 @@ void myDisplay(void) {
     const double PI = 3.14159;
     double r = 100;
     int nn = 0;
-
-    float aa = (rand()/(float)RAND_MAX);
-    float bb = (rand()/(float)RAND_MAX);
-    float cc = (rand()/(float)RAND_MAX);
+    int mm = 0;
 
     while (nn < 3)
         nn = rand() % 11;
@@ -34,10 +31,19 @@ void myDisplay(void) {
         xx = rand() % 640;
         yy = rand() % 640;
 
+        mm = rand() % 11;
+
+        while (mm < 3)
+            mm = rand() % 11;
+
+        float aa = (rand()/(float)RAND_MAX);
+        float bb = (rand()/(float)RAND_MAX);
+        float cc = (rand()/(float)RAND_MAX);
+
 
         glBegin(GL_POLYGON);
-        for (int ii = 0; ii < nn; ii++) {
-            double angle = ii * 2 * PI / nn;
+        for (int ii = 0; ii < mm; ii++) {
+            double angle = ii * 2 * PI / mm;
             glColor3f(aa,bb,cc);
             glVertex2d(xx + r * cos(angle), yy + r * sin(angle));
         }
