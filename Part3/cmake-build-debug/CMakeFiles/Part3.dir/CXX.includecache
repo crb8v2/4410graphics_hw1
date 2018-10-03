@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/crbaniak/Desktop/Link to fall18/4410_compGraphics/hw1/Part3/main.cpp
+GL/glut.h
+-
+iostream
+-
+cmath
+-
+
